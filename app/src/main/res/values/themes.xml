@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+<style name="Theme.HolaMundoJorge" parent="Theme.AppCompat.Light" />
+    <!-- Hacemos que el tema de la aplicación herede de Theme.AppCompat.Light
+         Esto es para que la apliación sea compatible con actividades AppCompatActivity()
+
+         Theme antiguo. Si ponemos este, en el AndroidManifest tendremos que usar como tema AppCompat.Light
     <style name="Theme.HolaMundoJorge" parent="android:Theme.Material.Light.NoActionBar" />
+    -->
 </resources>
