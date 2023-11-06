@@ -11,10 +11,13 @@
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:text="@string/introducir_nombre"
+        android:textColor="@color/green"
         android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintBottom_toTopOf="@id/input"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="10dp"/>
         <!--app:layout_constraintBottom_toTopOf="@id/input"
         app:layout_constraintStart_toStartOf="@+id/input"
         app:layout_constraintEnd_toEndOf="@id/input"-->
@@ -23,21 +26,24 @@
         android:id="@+id/input"
         android:layout_width="0dp"
         android:layout_height="50dp"
+        android:singleLine="true"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginHorizontal="20dp"/>
+        android:layout_marginHorizontal="40dp"/>
 
     <Button
         android:id="@+id/boton"
         android:layout_width="128dp"
         android:layout_height="64dp"
         android:text="@string/boton_iniciar"
-        android:textColor="@color/teal_200"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColor="@color/white"
+        android:background="@color/green"
+        app:layout_constraintTop_toBottomOf="@id/input"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="42dp"/>
         <!--app:layout_constraintTop_toBottomOf="@id/input"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

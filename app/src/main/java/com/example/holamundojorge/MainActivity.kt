@@ -1,8 +1,12 @@
 package com.example.holamundojorge
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
+import androidx.appcompat.app.AppCompatActivity
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.appcompat.widget.AppCompatEditText
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
@@ -12,10 +16,23 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.holamundojorge.ui.theme.HolaMundoJorgeTheme
 
-class MainActivity : ComponentActivity() {
+class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        val boton = findViewById<Button>(R.id.boton)
+        val input = findViewById<AppCompatEditText>(R.id.input)
+
+        boton.setOnClickListener {
+            val nombre = input.text.toString()
+
+            if(nombre.isNotEmpty()){
+                val intent = Intent(this, ResultActivity::class.java)
+                intent.putExtra("EMPTY_NAME", nombre)
+                startActivity(intent)
+            }
+        }
         /*setContent {
             HolaMundoJorgeTheme {
                 // A surface container using the 'background' color from the theme
